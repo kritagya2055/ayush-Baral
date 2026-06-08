@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="text-white font-medium">Kritagya Bhandari</div>
         <div className="flex justify-center gap-5">
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/bhandari_kritagya?igsh=MTV3OHBicG5kOXBjbQ=="
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -19,7 +19,7 @@ export default function Footer() {
             <InstagramIcon />
           </a>
           <a
-            href="https://facebook.com/"
+            href="https://www.facebook.com/share/1GWgnrDbLs/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -28,7 +28,7 @@ export default function Footer() {
             <FacebookIcon />
           </a>
           <a
-            href="https://wa.me/"
+            href="https://wa.me/9779704593561"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"

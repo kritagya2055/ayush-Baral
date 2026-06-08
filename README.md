@@ -20,38 +20,29 @@ Open http://localhost:3000.
 
 ## Routes
 
-- `/` — landing page (hero, social proof, about, process, final CTA)
-- `/book` — Calendly inline embed
-- `/thank-you` — confirmation + video
+- `/` — landing page: hero → social proof → about → 3-step process → lead capture form → final CTA
+- `/book` — Calendly inline embed (`calendly.com/bhandarikritagya2055/free-1-1-consultation`)
+- `/thank-you` — confirmation + Vimeo video (`vimeo.com/1198966045`)
 
 ## Funnel flow
 
 1. Visitor lands on `/`
-2. Clicks a CTA → Flodesk popup form opens
-3. After Flodesk submission, Flodesk redirects to `/book`
-4. Visitor books a slot in the Calendly inline widget
-5. After Calendly confirms, Calendly redirects to `/thank-you`
-6. Visitor sees confirmation message and the welcome video
+2. Clicks any CTA → smooth-scrolls to the lead capture form
+3. Fills name + email and submits → client-side validation → `router.push("/book")`
+4. Books a slot inside the Calendly inline widget on `/book`
+5. Calendly's confirmation redirect (configured in the Calendly dashboard) sends them to `/thank-you`
+6. `/thank-you` plays the Vimeo welcome message
 
-## Where to paste integration codes
+## Swapping the dummy form for Flodesk
 
-### 1. Flodesk popup script
+`components/LeadCaptureForm.jsx` is marked `// REPLACE THIS FORM WITH FLODESK EMBED LATER`. To swap it out:
 
-In `app/layout.jsx`, paste your Flodesk Universal Code inside `<head>` (above the `Inter` `<link>` is fine).
+1. Paste your Flodesk inline embed snippet inside the `<div id="lead-form">` section of `app/page.jsx:170` in place of `<LeadCaptureForm />`.
+2. In Flodesk, set the form's success redirect to `https://YOUR_DOMAIN/book`.
 
-Then edit `components/FlodeskCTA.jsx` and replace `REPLACE_WITH_FLODESK_FORM_ID` with your popup form ID. The CTA falls back to navigating to `/book` if the Flodesk script hasn't loaded yet, so the funnel keeps working during setup.
+## Calendly redirect to /thank-you
 
-In the Flodesk dashboard, set the form's success redirect URL to `https://YOUR_DOMAIN/book`.
-
-### 2. Calendly inline embed
-
-In `app/book/page.jsx`, find the `=== PASTE CALENDLY INLINE EMBED HERE ===` block and paste Calendly's inline embed snippet there. Remove the placeholder div.
-
-In the Calendly dashboard: **Event Type → Confirmation Page → Redirect to external site** → set to `https://YOUR_DOMAIN/thank-you`.
-
-### 3. Thank-you video
-
-In `app/thank-you/page.jsx`, find the `=== PASTE VIDEO EMBED IFRAME HERE ===` block and paste your iframe (YouTube, Vimeo, Wistia, etc). Remove the placeholder div.
+In the Calendly dashboard: **Event Type → Confirmation Page → Redirect to external site** → set to `https://YOUR_DOMAIN/thank-you`. The embed code itself in `components/CalendlyEmbed.jsx` is the one you provided and is not modified.
 
 ## Design tokens (do not deviate)
 
@@ -70,4 +61,4 @@ Rules: no emojis, no gradients, no colors outside this table, hover states use a
 
 ## Deploy
 
-Push to GitHub, import the repo on Vercel — no environment variables needed unless you add server-side integrations later.
+Push to GitHub, import the repo on Vercel — no environment variables required.

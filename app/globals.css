@@ -156,3 +156,24 @@ body {
 .step-card:hover {
   border-color: #A8D8F0;
 }
+
+.lead-input {
+  background-color: #161616;
+  border: 1px solid #222222;
+  color: #FFFFFF;
+  border-radius: 6px;
+  padding: 0.875rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.lead-input::placeholder {
+  color: #A0A0A0;
+}
+
+.lead-input:focus {
+  border-color: #A8D8F0;
+}

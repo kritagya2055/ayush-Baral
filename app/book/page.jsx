@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import CalendlyEmbed from "@/components/CalendlyEmbed";
 
 export const metadata = {
   title: "Book Your Strategy Call — Kritagya Bhandari",
@@ -36,13 +37,6 @@ export default function BookPage() {
             Only 5 spots available — book before they fill up.
           </p>
 
-          {/* CALENDLY EMBED
-              ---------------------------------------------------------------
-              PASTE YOUR CALENDLY INLINE EMBED CODE INSIDE THE DIV BELOW.
-              Do NOT modify Calendly functionality.
-              In Calendly: Settings → Event Type → Confirmation Page →
-              Redirect to external site → set to https://YOUR_DOMAIN/thank-you
-              --------------------------------------------------------------- */}
           <div
             className="w-full mt-10 fade-up overflow-hidden"
             data-delay="260"
@@ -53,17 +47,7 @@ export default function BookPage() {
               backgroundColor: "#0A0A0A",
             }}
           >
-            {/* === PASTE CALENDLY INLINE EMBED HERE === */}
-            <div
-              className="w-full h-full flex items-center justify-center text-text-muted text-center px-6"
-              style={{ minHeight: "700px" }}
-            >
-              <span>
-                Calendly embed placeholder — paste your inline embed snippet
-                inside the container in <code>app/book/page.jsx</code>.
-              </span>
-            </div>
-            {/* === END CALENDLY EMBED === */}
+            <CalendlyEmbed />
           </div>
         </div>
       </main>

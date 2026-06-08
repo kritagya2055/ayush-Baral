@@ -15,7 +15,7 @@ export default function Nav() {
       <div className="flex items-center justify-between px-8 py-4 max-w-[1280px] mx-auto">
         <div className="flex items-center gap-5">
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/bhandari_kritagya?igsh=MTV3OHBicG5kOXBjbQ=="
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -24,7 +24,7 @@ export default function Nav() {
             <InstagramIcon />
           </a>
           <a
-            href="https://facebook.com/"
+            href="https://www.facebook.com/share/1GWgnrDbLs/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -33,7 +33,7 @@ export default function Nav() {
             <FacebookIcon />
           </a>
           <a
-            href="https://wa.me/"
+            href="https://wa.me/9779704593561"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"

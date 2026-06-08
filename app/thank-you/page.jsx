@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
-  title: "You're Confirmed — Kritagya Bhandari",
+  title: "You Are Confirmed — Kritagya Bhandari",
   description: "Your strategy call is confirmed.",
 };
 
@@ -17,7 +17,7 @@ export default function ThankYouPage() {
         style={{ backgroundColor: "#0A0A0A", minHeight: "100vh" }}
       >
         <div className="max-w-[800px] mx-auto text-center flex flex-col items-center gap-6">
-          <p className="section-label fade-up">You&apos;re Confirmed</p>
+          <p className="section-label fade-up">You Are Confirmed</p>
           <h1 className="section-h1 fade-up" data-delay="80">
             Your Call Is Confirmed
           </h1>
@@ -30,33 +30,29 @@ export default function ThankYouPage() {
             message from me.
           </p>
 
-          {/* VIDEO EMBED
-              ---------------------------------------------------------------
-              PASTE YOUR VIDEO EMBED INSIDE THE DIV BELOW.
-              Do NOT modify video embed functionality.
-              Example: <iframe src="https://www.youtube.com/embed/XYZ" ... />
-              --------------------------------------------------------------- */}
           <div
-            className="w-full mt-8 fade-up overflow-hidden"
+            className="w-full mt-8 fade-up"
             data-delay="220"
             style={{
               maxWidth: "700px",
               border: "1px solid #222222",
               borderRadius: "12px",
+              overflow: "hidden",
               aspectRatio: "16 / 9",
               backgroundColor: "#111111",
             }}
           >
-            {/* === PASTE VIDEO EMBED IFRAME HERE === */}
-            <div
-              className="w-full h-full flex items-center justify-center text-text-muted text-center px-6"
-            >
-              <span>
-                Video embed placeholder — paste your iframe in{" "}
-                <code>app/thank-you/page.jsx</code>.
-              </span>
-            </div>
-            {/* === END VIDEO EMBED === */}
+            {/* Vimeo embed — do not modify */}
+            <iframe
+              src="https://player.vimeo.com/video/1198966045"
+              width="700"
+              height="394"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              style={{ width: "100%", height: "100%", display: "block" }}
+              title="A message from Kritagya"
+            />
           </div>
 
           <p

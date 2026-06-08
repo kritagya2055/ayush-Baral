@@ -1,7 +1,8 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
-import FlodeskCTA from "@/components/FlodeskCTA";
+import ScrollToFormButton from "@/components/ScrollToFormButton";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 const TRUSTED_BY = [
   "Ayush Baral",
@@ -13,18 +14,18 @@ const TRUSTED_BY = [
 const STEPS = [
   {
     num: "01",
-    title: "Discover",
-    body: "We start with a deep audit of your business, audience, and current funnel. No assumptions — only a clear picture of where the leaks and the leverage points are.",
+    title: "Audit Your Marketing",
+    body: "We do a deep dive into your current marketing, identify what's broken, and find the biggest growth opportunities hiding in plain sight.",
   },
   {
     num: "02",
-    title: "Strategize",
-    body: "I design a custom marketing system tailored to your offer and market — content, ads, and conversion flows that map directly to revenue, not vanity metrics.",
+    title: "Build Your Strategy",
+    body: "We build a clear, custom marketing strategy tailored to your business goals — no templates, no generic advice, just a real plan built for you.",
   },
   {
     num: "03",
-    title: "Execute",
-    body: "We launch, measure, and refine. You get a marketing engine that compounds — more qualified leads, higher conversions, and real authority in your space.",
+    title: "Execute and Grow",
+    body: "You walk away with an actionable roadmap. We guide you through execution so you can start generating leads and growing your business immediately.",
   },
 ];
 
@@ -34,7 +35,7 @@ export default function HomePage() {
       <ScrollReveal />
       <Nav />
       <main>
-        {/* HERO */}
+        {/* SECTION 1 — HERO */}
         <section
           className="noise-overlay min-h-screen flex items-center justify-center px-6 py-24"
           style={{ backgroundColor: "#0A0A0A" }}
@@ -42,10 +43,7 @@ export default function HomePage() {
           <div className="hero-stagger max-w-[960px] w-full flex flex-col items-center text-center gap-6">
             <span
               className="inline-block rounded-full px-4 py-1.5 text-[13px]"
-              style={{
-                border: "1px solid #A8D8F0",
-                color: "#A8D8F0",
-              }}
+              style={{ border: "1px solid #A8D8F0", color: "#A8D8F0" }}
             >
               Free 1-Hour Strategy Call
             </span>
@@ -74,16 +72,16 @@ export default function HomePage() {
             </span>
 
             <div className="mt-2">
-              <FlodeskCTA microText="5 spots remaining — once they're gone, they're gone">
+              <ScrollToFormButton microText="5 spots remaining — once they're gone, they're gone">
                 Reserve My Strategy Call
-              </FlodeskCTA>
+              </ScrollToFormButton>
             </div>
           </div>
         </section>
 
-        {/* SOCIAL PROOF */}
+        {/* SECTION 2 — SOCIAL PROOF */}
         <section
-          className="px-6 py-12"
+          className="px-8 py-12"
           style={{
             backgroundColor: "#111111",
             borderTop: "1px solid #222222",
@@ -120,9 +118,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ABOUT */}
+        {/* SECTION 3 — ABOUT */}
         <section
-          className="px-6 py-32"
+          className="px-8 py-32"
           style={{ backgroundColor: "#0A0A0A" }}
         >
           <div className="max-w-[800px] mx-auto text-center">
@@ -143,9 +141,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* HOW IT WORKS */}
+        {/* SECTION 4 — HOW IT WORKS */}
         <section
-          className="px-6 py-32"
+          className="px-8 py-32"
           style={{ backgroundColor: "#0A0A0A" }}
         >
           <div className="max-w-[1100px] mx-auto">
@@ -192,20 +190,52 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* FINAL CTA */}
+        {/* SECTION 5 — LEAD CAPTURE FORM */}
+        {/* REPLACE THIS FORM WITH FLODESK EMBED LATER */}
         <section
-          className="px-6 py-32 text-center"
+          id="lead-form"
+          className="px-8 py-32"
           style={{
             backgroundColor: "#111111",
             borderTop: "1px solid #222222",
           }}
+        >
+          <div className="max-w-[600px] mx-auto text-center flex flex-col items-center gap-4">
+            <p className="section-label fade-up">Get Started</p>
+            <h2 className="section-h2 fade-up" data-delay="100">
+              Claim Your Free Strategy Call
+            </h2>
+            <p
+              className="text-text-muted fade-up"
+              data-delay="160"
+              style={{ fontSize: "1.05rem", lineHeight: 1.65 }}
+            >
+              Enter your details below and we will get you booked in.
+            </p>
+            <p
+              className="text-accent fade-up"
+              data-delay="220"
+              style={{ fontSize: "14px" }}
+            >
+              Only 5 spots available this month.
+            </p>
+            <div className="w-full fade-up" data-delay="260">
+              <LeadCaptureForm />
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 6 — FINAL CTA */}
+        <section
+          className="px-8 py-32 text-center"
+          style={{ backgroundColor: "#0A0A0A" }}
         >
           <div className="max-w-[800px] mx-auto flex flex-col items-center gap-6">
             <h2 className="section-h2 fade-up">
               Ready to Grow Your Business?
             </h2>
             <p
-              className="text-text-muted fade-up max-w-[560px]"
+              className="text-text-muted fade-up max-w-[600px]"
               data-delay="100"
               style={{ fontSize: "1.1rem", lineHeight: 1.7 }}
             >
@@ -220,9 +250,9 @@ export default function HomePage() {
               Only 5 spots available this month. Spots are filling fast.
             </p>
             <div className="mt-2 fade-up" data-delay="200">
-              <FlodeskCTA microText="No commitment. No cost. Just results.">
+              <ScrollToFormButton microText="No commitment. No cost. Just results.">
                 Reserve My Strategy Call
-              </FlodeskCTA>
+              </ScrollToFormButton>
             </div>
           </div>
         </section>
