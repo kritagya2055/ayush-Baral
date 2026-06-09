@@ -2,7 +2,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import ScrollToFormButton from "@/components/ScrollToFormButton";
-import LeadCaptureForm from "@/components/LeadCaptureForm";
+import FlodeskForm from "@/components/FlodeskForm";
 
 const TRUSTED_BY = [
   "Ayush Baral",
@@ -191,39 +191,7 @@ export default function HomePage() {
         </section>
 
         {/* SECTION 5 — LEAD CAPTURE FORM */}
-        {/* REPLACE THIS FORM WITH FLODESK EMBED LATER */}
-        <section
-          id="lead-form"
-          className="px-8 py-32"
-          style={{
-            backgroundColor: "#111111",
-            borderTop: "1px solid #222222",
-          }}
-        >
-          <div className="max-w-[600px] mx-auto text-center flex flex-col items-center gap-4">
-            <p className="section-label fade-up">Get Started</p>
-            <h2 className="section-h2 fade-up" data-delay="100">
-              Claim Your Free Strategy Call
-            </h2>
-            <p
-              className="text-text-muted fade-up"
-              data-delay="160"
-              style={{ fontSize: "1.05rem", lineHeight: 1.65 }}
-            >
-              Enter your details below and we will get you booked in.
-            </p>
-            <p
-              className="text-accent fade-up"
-              data-delay="220"
-              style={{ fontSize: "14px" }}
-            >
-              Only 5 spots available this month.
-            </p>
-            <div className="w-full fade-up" data-delay="260">
-              <LeadCaptureForm />
-            </div>
-          </div>
-        </section>
+        <FlodeskForm />
 
         {/* SECTION 6 — FINAL CTA */}
         <section
