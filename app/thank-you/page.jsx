@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
-  title: "You Are Confirmed — Kritagya Bhandari",
-  description: "Your strategy call is confirmed.",
+  title: "Thank You — Kritagya Bhandari",
+  description: "Thank you for subscribing.",
 };
 
 export default function ThankYouPage() {
@@ -17,17 +17,16 @@ export default function ThankYouPage() {
         style={{ backgroundColor: "#0A0A0A", minHeight: "100vh" }}
       >
         <div className="max-w-[800px] mx-auto text-center flex flex-col items-center gap-6">
-          <p className="section-label fade-up">You Are Confirmed</p>
+          <p className="section-label fade-up">You&apos;re In</p>
           <h1 className="section-h1 fade-up" data-delay="80">
-            Your Call Is Confirmed
+            Thank You for Subscribing!
           </h1>
           <p
             className="text-text-muted fade-up max-w-[600px]"
             data-delay="160"
             style={{ fontSize: "1.15rem", lineHeight: 1.6 }}
           >
-            Check your email for the details. While you wait, watch this short
-            message from me.
+            You&apos;re on the list. Watch this short message from me while you wait.
           </p>
 
           <div
@@ -60,7 +59,7 @@ export default function ThankYouPage() {
             data-delay="280"
             style={{ fontSize: "14px", marginTop: "1.5rem" }}
           >
-            See you on the call.
+            Talk soon.
           </p>
         </div>
       </main>
