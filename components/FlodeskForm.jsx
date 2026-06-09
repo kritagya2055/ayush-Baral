@@ -30,6 +30,14 @@ export default function FlodeskForm() {
       formId: '6a284442c4e25021363b19df',
       containerEl: '#fd-form-6a284442c4e25021363b19df'
     });
+
+    function handleMessage(event) {
+      if (event.data && event.data.type === 'flodesk:form:success') {
+        window.location.href = '/thank-you';
+      }
+    }
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
   }, []);
 
   return (
